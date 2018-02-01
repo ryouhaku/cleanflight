@@ -16,7 +16,7 @@
 #
 
 # The target to build, see VALID_TARGETS below
-TARGET    ?= SPRACINGF3NEO
+TARGET    ?= SPRACINGF3MINI
 
 # Compile-time options
 OPTIONS   ?=
@@ -285,7 +285,7 @@ ifeq ($(TARGET_MCU),STM32F1)
 	@echo "Notice: STM32F1 based targets will be unsupported soon."
 endif
 
-	
+
 	$(V1) $(CROSS_CC) -o $@ $^ $(LD_FLAGS)
 	$(V0) $(SIZE) $(TARGET_ELF)
 
@@ -475,4 +475,3 @@ $(TARGET_OBJS) : Makefile
 
 # include auto-generated dependencies
 -include $(TARGET_DEPS)
-
